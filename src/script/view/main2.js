@@ -21,7 +21,7 @@ function main2() {
        };
 
        // Membuat GET request dan menetapkan target URL
-       xhr.open("GET", `${baseUrl}/list`);
+       xhr.open("GET", `${baseUrl}/api/json/v1/1/filter.php?c=Seafood`);
        // Mengirimkan request
        xhr.send();
    };
