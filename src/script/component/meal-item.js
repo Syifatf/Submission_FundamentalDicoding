@@ -9,13 +9,13 @@ class MealItem extends HTMLElement {
   render() {
     this.innerHTML = `
      <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
-        <div class="card">
+        <div>
           <div class="card-body">
-             <h5>${book.strCategory}</h5>
-                <img src="${book.strCategoryThumb}"/>                        
+             <h5>${this._meal.strCategory}</h5>
+             <img src="${this._meal.strCategoryThumb}"/>                        
           </div>
         </div>
-    </div>`;
+      </div>`;
   }
 }
 

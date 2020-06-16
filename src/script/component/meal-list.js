@@ -1,33 +1,30 @@
 import "./meal-item.js";
 
 class ListMeal extends HTMLElement {
-  set meals(meals) {
-    this._meals = meals;
-    this.render();
+  connectedCallback() {
+    //jika ingin element diterapkan langsung
+    this.getMeals();
   }
 
   getMeals = async () => {
     try {
-      const response = await fetch(`${baseUrl}/categories.php`);
+      const response = await fetch(
+        "https://www.themealdb.com/api/json/v1/1/categories.php"
+      );
       const responseJson = await response.json();
-      if (responseJson.error) {
-        this.showResponseMessage(responseJson.message);
-      } else {
-        this.renderAllMeals(responseJson.categories);
-      }
+      console.log(responseJson);
+      this.renderAllMeals(responseJson.categories);
     } catch (error) {
-      this, showResponseMessage(error);
+      this.showResponseMessage(error);
     }
   };
 
   renderAllMeals = categories => {
-    const listBookElement = document.querySelector("#listMeal");
-    listBookElement.innerHTML = "";
-
-    categories.forEach(item => {
-      const dataElement = document.createElement("meal-item");
-      dataElement.item = item;
-      this.appendChild(dataElement);
+    this.innerHTML = "";
+    categories.forEach(meal => {
+      const mealItemElement = document.createElement("meal-item");
+      mealItemElement.meal = meal;
+      this.appendChild(mealItemElement);
     });
   };
 
