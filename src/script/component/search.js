@@ -1,4 +1,4 @@
-// class Search extends HTMLElement {
+// class SearchJ extends HTMLElement {
 //    constructor() {
 //      super();
 //      this.shadowDOM = this.attachShadow({ mode: "open" });
@@ -8,7 +8,6 @@
 //      this.render();
 //    }
 
-//    // menyediakan setter. Gunanya untuk menetapkan fungsi event agar dapat mudah diterapkan dari luar class SearchBar.
 //    set clickEvent(event) {
 //      this._clickEvent = event;
 //      this.render();

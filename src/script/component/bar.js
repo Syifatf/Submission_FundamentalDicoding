@@ -3,8 +3,7 @@ class Header extends HTMLElement {
   //   super();
   //   this.shadowDOM = this.attachShadow({ mode: "open" });
   // }
-  //akan terpanggil ketika element
-  //diterapkan pada DOM
+  //akan terpanggil ketika element diterapkan pada DOM
   connectedCallback() {
     //jika ingin element diterapkan langsung
     this.render();
@@ -23,16 +22,19 @@ class Header extends HTMLElement {
              
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#carouselExampleControls">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="#carouselExampleControls">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active   ">
+          <a class="nav-link" href="#data">Meal<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active   ">
+          <a class="nav-link" href="#data2">Drink<span class="sr-only">(current)</span></a>
+        </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="search" aria-label="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
           </form>
         </div>
       </nav>`;
