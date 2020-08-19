@@ -2,13 +2,11 @@ import "../component/bar.js";
 import "../component/carousel.js";
 import "../component/menu.js";
 import "../component/meal-list.js";
-import "../component/drink-list.js";
 import DataSource from "../data/data-sources.js";
 
-const main = () => {
+const mainMenu = () => {
   const searchElement = document.querySelector("search");
   const mealListElement = document.querySelector("meal-list");
-  const drinkListElement = document.querySelector("drink-list");
 
   const onButtonSearchClicked = async () => {
     try {
@@ -21,16 +19,16 @@ const main = () => {
 
   const renderResult = results => {
     mealListElement.meals = results;
-    drinkaListElement.drink = results;
+   //  drinkaListElement.drink = results;
   };
 
   const fallbackResult = message => {
     mealListElement.renderError(message);
-    drinkListElement.renderError(message);
+   //  drinkListElement.renderError(message);
   };
 
   searchElement.clickEvent = onButtonSearchClicked;
 };
 
 
-export default main;
+export default mainMenu;

@@ -11,13 +11,13 @@ class CarouselItem extends HTMLElement {
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
        <div class="carousel-inner">
          <div class="carousel-item active">
-           <img class="d-block w-100" src="assets/image/mk.jpg" alt="First slide">
+           <img id="cr" class="d-block w-100" src="assets/image/1.png" alt="First slide">
          </div>
          <div class="carousel-item">
-           <img class="d-block w-100" src="assets/image/mk3.jpg" alt="Second slide">
+           <img id="cr" class="d-block w-100" src="assets/image/2.png" alt="Second slide">
          </div>
          <div class="carousel-item">
-           <img class="d-block w-100" src="assets/image/mk4.jpg" alt="Third slide">
+           <img id="cr" class="d-block w-100" src="assets/image/5.png" alt="Third slide">
          </div>
        </div>
        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

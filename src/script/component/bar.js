@@ -8,6 +8,13 @@ class Header extends HTMLElement {
     //jika ingin element diterapkan langsung
     this.render();
   }
+
+  //fungsi getter yang mengembalikan nilai value
+   //dari nilai input
+   get value() {
+    return this.shadowDOM.querySelector("#searchElement").value;
+  }
+
   //untuk merender
   render() {
     //berfungsi untuk menampilkan element yg dibutuhkan
@@ -15,7 +22,7 @@ class Header extends HTMLElement {
     //lihat this.innerHTML
     this.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="assets/image/meals.png" width="30" height="30" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="assets/image/meals.png" width="30" height="30" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,13 +38,29 @@ class Header extends HTMLElement {
         <li class="nav-item active   ">
           <a class="nav-link" href="#data2">Drink<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active   ">
+          <a class="nav-link" href="#menuu">Menu<span class="sr-only">(current)</span></a>
+        </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="search" aria-label="search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
+            <input 
+              id="searchElement" 
+              class="form-control mr-sm-2" 
+              type="search" 
+              placeholder="Search" 
+              aria-label="search"/>
+            
+            <button 
+              id="searchButtonElement" 
+              class="btn btn-success my-2 my-sm-0" 
+              type="submit">search</button>
           </form>
         </div>
       </nav>`;
+
+      this.shadowDOM
+       .querySelector("#searchButtonElement")
+       .addEventListener("click", this._clickEvent);
   }
 }
 
