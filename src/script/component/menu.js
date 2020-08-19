@@ -13,7 +13,7 @@ class MenuItem extends HTMLElement {
             <div class="card-body">
               <h5 class="card-title">Special Drinks</h5>
               <img class="d-block w-100" src="assets/image/4.png"/> <br>
-              <a href="../src/menu2.html" class="btn btn-success">Go Meal</a>
+              <a href="#data" class="btn btn-success">Go Meal</a>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@ class MenuItem extends HTMLElement {
             <div class="card-body">
               <h5 class="card-title">Special Meals</h5>
               <img class="d-block w-100" src="assets/image/3.png"/> <br>
-              <a href="../src/menu2.html" class="btn btn-success">Go Drink</a>
+              <a href="#data2" class="btn btn-success">Go Drink</a>
             </div>
           </div>
         </div>

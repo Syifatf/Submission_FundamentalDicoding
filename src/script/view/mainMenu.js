@@ -1,6 +1,4 @@
 import "../component/bar.js";
-import "../component/carousel.js";
-import "../component/menu.js";
 import "../component/meal-list.js";
 import DataSource from "../data/data-sources.js";
 
