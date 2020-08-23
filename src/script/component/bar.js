@@ -30,7 +30,6 @@ class Header extends HTMLElement {
              
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-          <div class="container">
             <li class="nav-item active">
               <a class="nav-link" href="#menuu">Menu <span class="sr-only">(current)</span></a>
             </li>
@@ -40,7 +39,6 @@ class Header extends HTMLElement {
             <li class="nav-item active   ">
               <a class="nav-link" href="#data2">Drink<span class="sr-only">(current)</span></a>
             </li>
-          </div>
       
           </ul>
           <form class="form-inline my-2 my-lg-0">
