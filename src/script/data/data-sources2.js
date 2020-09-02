@@ -8,8 +8,8 @@ class DataSource2 {
          return response.json();
        })
        .then(responseJson => {
-         if (responseJson.teams) {
-           return Promise.resolve(responseJson.teams);
+         if (responseJson.drinks) {
+           return Promise.resolve(responseJson.drinks);
          } else {
            return Promise.reject(`${keyword} is not found`);
          }

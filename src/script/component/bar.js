@@ -1,18 +1,19 @@
 class Header extends HTMLElement {
-  // constructor() {
-  //   super();
-  //   this.shadowDOM = this.attachShadow({ mode: "open" });
-  // }
   //akan terpanggil ketika element diterapkan pada DOM
   connectedCallback() {
     //jika ingin element diterapkan langsung
     this.render();
   }
 
+  set clickEvent(event) {
+    this._clickEvent = event;
+    this.render();
+  }
+
   //fungsi getter yang mengembalikan nilai value
    //dari nilai input
    get value() {
-    return this.shadowDOM.querySelector("#searchElement").value;
+    return this.querySelector("#searchElement").value;
   }
 
   //untuk merender
@@ -41,11 +42,11 @@ class Header extends HTMLElement {
             </li>
       
           </ul>
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0" name="search">
             <input 
               id="searchElement" 
               class="form-control mr-sm-2" 
-              type="search" 
+              type="searchElement" 
               placeholder="Search" 
               aria-label="search"/>
             
@@ -54,12 +55,12 @@ class Header extends HTMLElement {
               class="btn btn-success my-2 my-sm-0" 
               type="submit">search</button>
           </form>
+
         </div>
       </nav>`;
 
-      this.shadowDOM
-       .querySelector("#searchButtonElement")
-       .addEventListener("click", this._clickEvent);
+      this.querySelector("#searchButtonElement")
+          .addEventListener("click", this._clickEvent);
   }
 }
 

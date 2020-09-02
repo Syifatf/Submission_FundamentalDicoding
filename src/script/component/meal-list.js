@@ -19,6 +19,11 @@ class ListMeal extends HTMLElement {
     }
   };
 
+  set meals(meals) {
+    this.meals = meals;
+    this.renderAllMeals();
+  }
+
   renderAllMeals = categories => {
     this.innerHTML = "";
     categories.forEach(meal => {
