@@ -3,16 +3,18 @@ import "../component/carousel.js";
 import "../component/menu.js";
 import "../component/meal-list.js";
 import "../component/drink-list.js";
+// import "../component/search-bar.js";
 import DataSource from "../data/data-sources.js";
 
 const main = () => {
+  // const searchElement = document.querySelector("search-bar");
   const mealListElement = document.querySelector("meal-list");
   const drinkListElement = document.querySelector("drink-list");
 
   const onButtonSearchClicked = async () => {
     try {
       event.preventDefault();
-      const result = await DataSource.searchMeal(searchElement.value);
+  //     const result = await DataSource.searchMeal(searchElement.value);
       renderResult(result);
     } catch (message) {
       fallbackResult(message);
@@ -29,7 +31,7 @@ const main = () => {
     // drinkListElement.renderError(message);
   };
 
-  searchElement.clickEvent = onButtonSearchClicked;
+  // searchElement.clickEvent = onButtonSearchClicked;
 };
 
 

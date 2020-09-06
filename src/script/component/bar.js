@@ -11,7 +11,7 @@ class Header extends HTMLElement {
   }
 
   //fungsi getter yang mengembalikan nilai value
-   //dari nilai input
+  //  dari nilai input
    get value() {
     return this.querySelector("#searchElement").value;
   }
@@ -40,27 +40,9 @@ class Header extends HTMLElement {
             <li class="nav-item active   ">
               <a class="nav-link" href="#data2">Drink<span class="sr-only">(current)</span></a>
             </li>
-      
           </ul>
-          <form class="form-inline my-2 my-lg-0" name="search">
-            <input 
-              id="searchElement" 
-              class="form-control mr-sm-2" 
-              type="searchElement" 
-              placeholder="Search" 
-              aria-label="search"/>
-            
-            <button 
-              id="searchButtonElement" 
-              class="btn btn-success my-2 my-sm-0" 
-              type="submit">search</button>
-          </form>
-
         </div>
       </nav>`;
-
-      this.querySelector("#searchButtonElement")
-          .addEventListener("click", this._clickEvent);
   }
 }
 

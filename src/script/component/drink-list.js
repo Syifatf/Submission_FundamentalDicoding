@@ -19,6 +19,12 @@ class ListDrink extends HTMLElement {
     }
   };
 
+  set drinks(drinks) {
+    this.drinks = drinks;
+    this.renderAllDrinks();
+  }
+
+  
   renderAllDrinks = drinks => {
     this.innerHTML = "";
     drinks.forEach(drink => {
@@ -27,6 +33,22 @@ class ListDrink extends HTMLElement {
       this.appendChild(drinkItemElement);
     });
   };
+
+  renderError(messange) {
+    this.shadowDOM.innerHTML = `
+    <style>
+    .placeholder {
+      font-weight: lighter;
+      color: rgba(0, 0, 0, 0.5);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    </style>
+    `;
+    this.shadowDOM.innerHTML += `<h2 class="placeholder">${messange}</h2>`;
+  }
 
   showResponseMessage = (message = "Check your internet connection") => {
     alert(message);

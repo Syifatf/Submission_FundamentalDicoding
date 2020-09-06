@@ -86,6 +86,11 @@ img.cr {
  width: 100%;
 }
 
+h1 {
+    color: black;
+    margin-bottom: 30px;
+}
+
 header {
   display: inline;
 }
